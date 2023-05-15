@@ -4,7 +4,7 @@ export const numberOfLocations = async (userId) => {
   try {
     // console.log(userId);
     const res = await axios.post(
-      'https://tez2-api.onrender.com:3500/api/ads/numberOfLocations',
+      'http://localhost:3500/api/ads/numberOfLocations',
       { userId },
       {
         headers: { 'Content-Type': 'application/json' },

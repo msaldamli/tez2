@@ -1,9 +1,9 @@
 import axios from 'axios';
 import baseURL from '../axios/index';
 
-// const HTTP = axios.create({
-//   baseURL: 'http://localhost:3500/',
-// });
+const HTTP = axios.create({
+  baseURL: 'http://localhost:3500/',
+});
 
 export const createNewUser = async (user) => {
   try {
@@ -25,7 +25,7 @@ export const login = async (user) => {
     const user1 = JSON.stringify(user);
 
     const res = await axios.post(
-      'https://tez2-api.onrender.com:3500/api/users/login',
+      'http://localhost:3500/api/users/login',
       { user1 },
       { headers: { 'Content-Type': 'application/json' } }
     );

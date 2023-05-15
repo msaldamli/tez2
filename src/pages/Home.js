@@ -37,9 +37,7 @@ const Home = () => {
   // }, []);
   useEffect(() => {
     const data = async () => {
-      const response = await axios.get(
-        'https://tez2-api.onrender.com:3500/api/ads/'
-      );
+      const response = await axios.get('http://localhost:3500/api/ads/');
       console.log(response);
       setilanlar(response.data);
     };
@@ -49,12 +47,9 @@ const Home = () => {
   const handleClick = async (e, locationId, adres) => {
     e.preventDefault();
     console.log(locationId);
-    const res = await axios.put(
-      'https://tez2-api.onrender.com:3500/api/ads/' + locationId,
-      {
-        adres,
-      }
-    );
+    const res = await axios.put('http://localhost:3500/api/ads/' + locationId, {
+      adres,
+    });
     console.log(res);
     navigate('/location/' + locationId, { replace: true });
   };

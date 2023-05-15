@@ -6,7 +6,7 @@ export const createComment = async (yorum) => {
     const newComment = JSON.stringify(yorum);
 
     const res = await axios.post(
-      'https://tez2-api.onrender.com:3500/api/comments/createComment',
+      'http://localhost:3500/api/comments/createComment',
       newComment,
       {
         headers: { 'Content-Type': 'application/json' },
@@ -24,7 +24,7 @@ export const findLocations = async (location) => {
     const sendlocation = JSON.stringify(location);
     console.log(sendlocation);
     const res = await axios.post(
-      'https://tez2-api.onrender.com:3500/api/ads/findForComent',
+      'http://localhost:3500/api/ads/findForComent',
       { sendlocation },
       {
         headers: { 'Content-Type': 'application/json' },

@@ -13,7 +13,7 @@ const Location = () => {
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(
-        'https://tez2-api.onrender.com:3500/api/ads/' + locationId
+        'http://localhost:3500/api/ads/' + locationId
       );
       return res.data;
     };
@@ -33,7 +33,7 @@ const Location = () => {
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(
-        'https://tez2-api.onrender.com:3500/api/comments/' + locationId
+        'http://localhost:3500/api/comments/' + locationId
       );
       return res.data;
       // return res.data;

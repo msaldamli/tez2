@@ -6,7 +6,7 @@ export const createNevImage = async (Image) => {
     const newImage = JSON.stringify(Image);
 
     const res = await axios.post(
-      'https://tez2-api.onrender.com:3500/api/ads/createLocation',
+      'http://localhost:3500/api/ads/createLocation',
       newImage,
       {
         headers: { 'Content-Type': 'application/json' },
@@ -21,12 +21,9 @@ export const createNevImage = async (Image) => {
 
 export const allLocations = async () => {
   try {
-    const locations = await axios.get(
-      'https://tez2-api.onrender.com:3500/api/ads/',
-      {
-        headers: { 'Content-Type': 'application/json' },
-      }
-    );
+    const locations = await axios.get('http://localhost:3500/api/ads/', {
+      headers: { 'Content-Type': 'application/json' },
+    });
     console.log(locations.data);
     return locations.data;
   } catch (error) {
@@ -40,7 +37,7 @@ export const createNewLocation = async (add) => {
     const adds = JSON.stringify(add);
     // console.log(adds);
     const res = await axios.post(
-      'https://tez2-api.onrender.com:3500/api/ads/getFindLocation',
+      'http://localhost:3500/api/ads/getFindLocation',
       adds,
       {
         headers: { 'Content-Type': 'application/json' },

@@ -34,7 +34,7 @@ const ForCommentNext = () => {
   useEffect(() => {
     const data = async () => {
       const response = await axios.get(
-        'https://tez2-api.onrender.com:3500/api/ads/' + locationId
+        'http://localhost:3500/api/ads/' + locationId
       );
       setLocation(response.data);
       return response.data;
